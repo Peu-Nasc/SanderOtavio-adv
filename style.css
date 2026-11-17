@@ -268,3 +268,630 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     transform: none;
   }
 }
+
+/* Identidade mais clara: mantém o azul-marinho e o dourado nos detalhes. */
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+#hd {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: #e6e1d6 !important;
+  box-shadow: 0 8px 26px rgba(22, 34, 55, 0.07);
+}
+
+#hd .text-white {
+  color: var(--ink) !important;
+}
+
+#hd [class*="text-[#a9b2c4]"],
+#hd [class*="text-[#dcd8cb]"],
+#hd [class*="text-[#f2ede1]"] {
+  color: #647084 !important;
+}
+
+#hd [class*="bg-[#121f3d]"],
+#hd [class*="bg-[#0f1b38]"] {
+  background-color: #f5f2eb !important;
+}
+
+#hd [class*="border-[#25365c]"] {
+  border-color: #e6e1d6 !important;
+}
+
+#hd .text-\[\#c9a45c\],
+#hd .text-\[\#e6c985\] {
+  color: #8c6824 !important;
+}
+
+#dots-dropdown,
+#mobile-menu {
+  background: #fff !important;
+  border-color: #e6e1d6 !important;
+  box-shadow: 0 18px 42px rgba(22, 34, 55, 0.14);
+}
+
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 86% 22%, rgba(201, 164, 92, 0.13), transparent 38%),
+    radial-gradient(ellipse at 4% 100%, rgba(214, 205, 184, 0.34), transparent 42%),
+    linear-gradient(120deg, #fbfaf6 4%, #f5f2eb 55%, #eeebe3 100%);
+  border-color: #e6e1d6 !important;
+}
+
+.hero-bg .text-white {
+  color: var(--ink) !important;
+}
+
+.hero-bg [class*="text-[#c3cadb]"],
+.hero-bg [class*="text-[#a9b2c4]"] {
+  color: #5b6678 !important;
+}
+
+.hero-bg .gold-text {
+  background-image: linear-gradient(100deg, #9a742b 5%, #b38b3f 52%, #80601f 100%);
+}
+
+.hero-grid {
+  opacity: 0.45;
+  background-image: linear-gradient(rgba(139, 104, 36, 0.07) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(139, 104, 36, 0.07) 1px, transparent 1px);
+}
+
+.goal-card {
+  border-color: #e1d8c5;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 5px 16px rgba(22, 34, 55, 0.035);
+}
+
+.goal-card:hover {
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(22, 34, 55, 0.09);
+}
+
+.goal-card .text-white {
+  color: var(--ink) !important;
+}
+
+.goal-card [class*="text-[#a9b2c4]"] {
+  color: #687386 !important;
+}
+
+#flag-tabs {
+  background: #f3efe6 !important;
+  border-color: #e6e1d6 !important;
+}
+
+#flag-tabs button {
+  color: #596579 !important;
+}
+
+#flag-tabs button[class*="border-[#c9a45c]"] {
+  background: #fff !important;
+  color: #78591e !important;
+}
+
+#triagem {
+  color-scheme: light;
+  background: #f0ede5 !important;
+  border-color: #e6e1d6 !important;
+}
+
+#triagem .text-white,
+#quiz-box .text-white {
+  color: var(--ink) !important;
+}
+
+#triagem [class*="text-[#a9b2c4]"],
+#quiz-box [class*="text-[#a9b2c4]"],
+#quiz-box [class*="text-[#c3cadb]"] {
+  color: #5b6678 !important;
+}
+
+#quiz-box {
+  background: #fff !important;
+  border-color: #e6e1d6 !important;
+  box-shadow: 0 14px 36px rgba(22, 34, 55, 0.07);
+}
+
+#quiz-box [class*="bg-[#0a1226]"] {
+  background-color: #f8f6f1 !important;
+}
+
+#quiz-box [class*="border-[#25365c]"] {
+  border-color: #ded8cb !important;
+}
+
+#quiz-box input {
+  color: var(--ink) !important;
+}
+
+#quiz-box input::placeholder {
+  color: #7a8493;
+}
+
+#como [class*="bg-[#121f3d]"],
+#editorias-juridicas [class*="bg-[#121f3d]"] {
+  background: #fff !important;
+  border-color: #e6e1d6 !important;
+  box-shadow: 0 8px 24px rgba(22, 34, 55, 0.05);
+}
+
+.destination-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e6e1d6;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(22, 34, 55, 0.045);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.destination-card:hover,
+.destination-card[open] {
+  border-color: #c5a35f;
+  box-shadow: 0 14px 32px rgba(22, 34, 55, 0.09);
+}
+
+.destination-summary {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 0.85rem;
+  min-height: 100px;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.destination-summary::-webkit-details-marker {
+  display: none;
+}
+
+.destination-code {
+  grid-row: span 2;
+  color: #9a742b;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.destination-flag {
+  grid-row: span 2;
+  font-size: 1.65rem;
+}
+
+.destination-name {
+  color: var(--ink);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.destination-hint {
+  color: #737d8c;
+  font-size: 0.72rem;
+  grid-column: 3;
+}
+
+.destination-toggle {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid #e6e1d6;
+  border-radius: 50%;
+  color: #8c6824;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.destination-card[open] .destination-toggle {
+  transform: rotate(45deg);
+  background: #f6f2e8;
+}
+
+.destination-content {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid #eee9df;
+}
+
+.destination-content > p {
+  padding-top: 1.1rem;
+}
+
+.destination-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #80601f;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.destination-cta:hover {
+  color: #503a12;
+  text-decoration: underline;
+}
+
+.visa-country-card {
+  background: #fff;
+  border: 1px solid #e6e1d6;
+  box-shadow: 0 8px 24px rgba(22, 34, 55, 0.06);
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.visa-country-card:hover,
+.visa-country-card[open] {
+  border-color: #c5a35f;
+  box-shadow: 0 14px 32px rgba(22, 34, 55, 0.09);
+}
+
+.visa-country-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.visa-country-summary::-webkit-details-marker {
+  display: none;
+}
+
+.visa-country-card h2 {
+  color: var(--ink) !important;
+}
+
+.visa-country-toggle {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #e6e1d6;
+  border-radius: 50%;
+  color: #80601f;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.visa-country-card[open] .visa-country-toggle {
+  transform: rotate(45deg);
+  background: #f6f2e8;
+}
+
+.visa-country-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.visa-country-intro {
+  border-top: 1px solid #eee9df;
+  padding-top: 1.1rem;
+}
+
+.visa-country-intro p {
+  color: #5b6678 !important;
+}
+
+#destinos [class*="text-[#c9a45c]"],
+#editorias-juridicas [class*="text-[#c9a45c]"],
+#editorias-juridicas [class*="text-[#e6c985]"],
+#como [class*="text-[#c9a45c]"],
+#como [class*="text-[#e6c985]"],
+#faq [class*="text-[#c9a45c]"],
+#faq [class*="text-[#e6c985]"],
+#triagem [class*="text-[#c9a45c]"],
+#triagem [class*="text-[#e6c985]"],
+.hero-bg [class*="text-[#c9a45c]"] {
+  color: #755317 !important;
+}
+
+@media (max-width: 480px) {
+  .destination-summary {
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
+    column-gap: 0.65rem;
+    padding: 1rem;
+  }
+
+  .destination-code {
+    font-size: 1.35rem;
+  }
+
+  .destination-flag {
+    font-size: 1.4rem;
+  }
+
+  .destination-name {
+    font-size: 1.05rem;
+  }
+
+  .destination-content {
+    padding: 0 1rem 1.25rem;
+  }
+}
+
+/* Retoma a paleta azul-marinho e dourada da identidade original. */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--navy) !important;
+  color: var(--text) !important;
+}
+
+#hd {
+  background: rgba(10, 18, 38, 0.96) !important;
+  border-color: var(--line) !important;
+}
+
+#hd .text-white,
+.hero-bg .text-white,
+#destinos .text-white,
+#editorias-juridicas .text-white,
+#como .text-white,
+#faq .text-white,
+#triagem .text-white,
+#quiz-box .text-white {
+  color: #fff !important;
+}
+
+#hd [class*="text-[#a9b2c4]"],
+#hd [class*="text-[#dcd8cb]"],
+#hd [class*="text-[#f2ede1]"],
+.hero-bg [class*="text-[#a9b2c4]"],
+.hero-bg [class*="text-[#c3cadb]"],
+#destinos [class*="text-[#a9b2c4]"],
+#destinos [class*="text-[#c3cadb]"],
+#editorias-juridicas [class*="text-[#a9b2c4]"],
+#editorias-juridicas [class*="text-[#c3cadb]"],
+#como [class*="text-[#a9b2c4]"],
+#como [class*="text-[#c3cadb]"],
+#faq [class*="text-[#a9b2c4]"],
+#faq [class*="text-[#c3cadb]"],
+#triagem [class*="text-[#a9b2c4]"],
+#quiz-box [class*="text-[#a9b2c4]"],
+#quiz-box [class*="text-[#c3cadb]"] {
+  color: var(--muted) !important;
+}
+
+#hd [class*="bg-[#121f3d]"],
+#hd [class*="bg-[#0f1b38]"],
+#dots-dropdown,
+#mobile-menu {
+  background: var(--navy2) !important;
+}
+
+#hd [class*="border-[#25365c]"],
+#dots-dropdown,
+#mobile-menu {
+  border-color: var(--line) !important;
+}
+
+#hd .text-\[\#c9a45c\],
+#hd .text-\[\#e6c985\] {
+  color: var(--gold2) !important;
+}
+
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 86% 22%, rgba(48, 74, 129, 0.55), transparent 38%),
+    radial-gradient(ellipse at 4% 100%, rgba(23, 45, 93, 0.8), transparent 42%),
+    linear-gradient(120deg, #091122 4%, #0c1730 55%, #101e3c 100%) !important;
+}
+
+.hero-bg .gold-text {
+  background-image: linear-gradient(100deg, #e1bf76 5%, #f5e1ad 52%, #c9a45c 100%);
+}
+
+.hero-grid {
+  opacity: 1;
+}
+
+.goal-card {
+  background: rgba(18, 31, 61, 0.64);
+  border-color: rgba(201, 164, 92, 0.25);
+}
+
+.goal-card:hover {
+  background: rgba(29, 50, 102, 0.62);
+}
+
+.goal-card .text-white {
+  color: #fff !important;
+}
+
+.goal-card [class*="text-[#a9b2c4]"] {
+  color: var(--muted) !important;
+}
+
+#flag-tabs {
+  background: var(--navy) !important;
+  border-color: var(--line) !important;
+}
+
+#flag-tabs button {
+  color: var(--muted) !important;
+}
+
+#flag-tabs button[class*="border-[#c9a45c]"] {
+  background: var(--card) !important;
+  color: var(--gold2) !important;
+}
+
+#destinos,
+#editorias-juridicas,
+#como,
+#faq,
+#triagem {
+  color-scheme: dark;
+  background: var(--navy2) !important;
+  color: var(--text) !important;
+  border-color: var(--line) !important;
+}
+
+#destinos .so-card,
+#editorias-juridicas .so-card,
+#como .so-card {
+  background: linear-gradient(155deg, #121f3d 0%, #0f1b38 100%) !important;
+  border: 1px solid var(--line) !important;
+  border-top: 3px solid var(--gold) !important;
+  box-shadow: 0 8px 24px rgba(5, 10, 22, 0.2) !important;
+}
+
+#destinos .so-card:hover,
+#editorias-juridicas .so-card:hover,
+#como .so-card:hover {
+  border-color: var(--gold) !important;
+  box-shadow: 0 18px 38px rgba(5, 10, 22, 0.34) !important;
+}
+
+#destinos .border-\[\#25365c\],
+#editorias-juridicas .border-\[\#25365c\],
+#como .border-\[\#25365c\],
+#faq .border-\[\#25365c\] {
+  border-color: var(--line) !important;
+}
+
+#destinos .visa-chip {
+  border-color: #3a496b;
+  background: var(--navy2);
+  color: var(--text);
+}
+
+#destinos .visa-chip:hover {
+  border-color: var(--gold);
+  background: #1d3266;
+  color: #fff;
+}
+
+#editorias-juridicas .bg-\[\#0a1226\],
+#como .bg-\[\#0a1226\] {
+  background: var(--navy) !important;
+}
+
+#quiz-box {
+  background: var(--card) !important;
+  border-color: var(--line) !important;
+  box-shadow: 0 14px 36px rgba(5, 10, 22, 0.28);
+}
+
+#quiz-box [class*="bg-[#0a1226]"] {
+  background-color: var(--navy) !important;
+}
+
+#quiz-box [class*="border-[#25365c]"] {
+  border-color: var(--line) !important;
+}
+
+#quiz-box input {
+  background: var(--navy) !important;
+  border-color: var(--line) !important;
+  color: var(--text) !important;
+}
+
+#quiz-box input::placeholder {
+  color: var(--muted);
+}
+
+#destinos .destination-card {
+  background: var(--card) !important;
+  border-color: var(--line) !important;
+}
+
+#destinos .destination-card:hover,
+#destinos .destination-card[open] {
+  border-color: var(--gold) !important;
+  box-shadow: 0 14px 32px rgba(5, 10, 22, 0.32) !important;
+}
+
+#destinos .destination-code,
+#destinos .destination-name {
+  color: var(--text) !important;
+}
+
+#destinos .destination-hint,
+#destinos .destination-content > p {
+  color: var(--muted) !important;
+}
+
+#destinos .destination-toggle {
+  border-color: var(--line);
+  color: var(--gold2);
+}
+
+#destinos .destination-card[open] .destination-toggle {
+  background: var(--navy2);
+}
+
+#destinos .destination-content {
+  border-color: var(--line);
+}
+
+#destinos .destination-cta {
+  color: var(--gold2);
+}
+
+#destinos .destination-cta:hover {
+  color: #f5e1ad;
+}
+
+.visa-country-card {
+  background: var(--card) !important;
+  border-color: var(--line) !important;
+  box-shadow: 0 8px 24px rgba(5, 10, 22, 0.24);
+}
+
+.visa-country-card:hover,
+.visa-country-card[open] {
+  border-color: var(--gold) !important;
+  box-shadow: 0 14px 32px rgba(5, 10, 22, 0.34);
+}
+
+.visa-country-card h2 {
+  color: var(--text) !important;
+}
+
+.visa-country-summary {
+  color: var(--text);
+}
+
+.visa-country-toggle {
+  border-color: var(--line);
+  color: var(--gold2);
+}
+
+.visa-country-card[open] .visa-country-toggle {
+  background: var(--navy2);
+}
+
+.visa-country-intro {
+  border-color: var(--line);
+}
+
+.visa-country-intro p {
+  color: var(--muted) !important;
+}
+
+#destinos [class*="text-[#c9a45c]"],
+#editorias-juridicas [class*="text-[#c9a45c]"],
+#editorias-juridicas [class*="text-[#e6c985]"],
+#como [class*="text-[#c9a45c]"],
+#como [class*="text-[#e6c985]"],
+#faq [class*="text-[#c9a45c]"],
+#faq [class*="text-[#e6c985]"],
+#triagem [class*="text-[#c9a45c]"],
+#triagem [class*="text-[#e6c985]"],
+.hero-bg [class*="text-[#c9a45c]"] {
+  color: var(--gold2) !important;
+}

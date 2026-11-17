@@ -525,19 +525,22 @@
             '</li>';
           }).join("");
 
-          return '<div class="so-card p-6 sm:p-8 rounded space-y-5">' +
-            '<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#25365c] pb-4">' +
-              '<div>' +
-                '<h2 class="text-2xl sm:text-3xl font-bold text-white">' + c.flag + ' ' + c.name + '</h2>' +
-                '<p class="text-xs sm:text-sm text-[#c3cadb] mt-1">' + c.tagline + '</p>' +
+          return '<details class="visa-country-card so-card rounded">' +
+            '<summary class="visa-country-summary">' +
+              '<h2 class="text-2xl sm:text-3xl font-bold">' + c.flag + ' ' + c.name + '</h2>' +
+              '<span class="visa-country-toggle" aria-hidden="true">+</span>' +
+            '</summary>' +
+            '<div class="visa-country-content space-y-5">' +
+              '<div class="visa-country-intro">' +
+                '<p class="text-xs sm:text-sm text-[#c3cadb]">' + c.tagline + '</p>' +
+                '<span class="inline-block text-[10px] font-bold uppercase tracking-widest bg-[#0a1226] text-[#c9a45c] px-3 py-1.5 rounded border border-[#25365c] mt-3">' + c.badge + '</span>' +
               '</div>' +
-              '<span class="text-[10px] font-bold uppercase tracking-widest bg-[#0a1226] text-[#c9a45c] px-3 py-1.5 rounded border border-[#25365c] self-start">' + c.badge + '</span>' +
+              '<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">' + vList + '</ul>' +
+              '<div class="pt-2 flex flex-wrap gap-3">' +
+                '<button onclick="openQuizFor(\'visto\', \'' + ck + '\')" class="btn-gold text-xs px-5 py-3 rounded">Fazer Triagem de Perfil para ' + c.name + ' →</button>' +
+              '</div>' +
             '</div>' +
-            '<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">' + vList + '</ul>' +
-            '<div class="pt-2 flex flex-wrap gap-3">' +
-              '<button onclick="openQuizFor(\'visto\', \'' + ck + '\')" class="btn-gold text-xs px-5 py-3 rounded">Fazer Triagem de Perfil para ' + c.name + ' →</button>' +
-            '</div>' +
-          '</div>';
+          '</details>';
         }).join("");
 
         container.innerHTML =
